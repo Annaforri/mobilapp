@@ -1,0 +1,80 @@
+
+
+@use 'design';
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .logo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: design.$hvit;
+    border-radius: 50%; /* gjør sirkelen */
+    border: 3px solid design.$hvit;
+    overflow: hidden; /* klipp bildet inni sirkelen */
+
+    img {
+      width: 100%;
+      height: 100%; /* fyller hele containeren */
+      object-fit: cover; /* fyller sirkelen */
+      display: block; /* fjerner mellomrom under bildet */
+    }
+  }
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+
+    background-color: design.$kaldmørk-grønn;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+
+    width: min(100%, 525px);
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    padding:1rem;
+
+    ul {
+        list-style: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        margin: 0 ;
+        padding: 0;
+
+        width: min(100%, 400px);
+
+        li {
+            padding: 0.5rem 1rem;
+
+            a {
+                text-decoration: none;
+                color: design.$hvit;
+
+                &:hover {
+                    color: design.$grønn;
+                }
+
+            }
+        }
+    }
+}
+
+
