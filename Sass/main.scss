@@ -1,6 +1,6 @@
 @use 'design';
 @use 'header';
-
+@use 'footer';
 /* ===== Reset / grunnlag ===================================== */
 *,
 *::before,
@@ -15,7 +15,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: design.$hvit;
   color: design.$svart;
-  padding-bottom: 100px;    /* slik at fixed-nav ikke dekker innhold */
+  padding-bottom: 150px;    /* slik at fixed-nav ikke dekker innhold */
 }
 
 /* Viktig for at grid/flex-barn skal få lov å krympe */
@@ -105,14 +105,18 @@ section, article, .grid-item { min-width: 0; }
 }
 
 /* ===== Velkomstbanner ======================================= */
+
 #welcome-banner {
-  @include kortbase(#c2c2c2);
-  @include bg-overlay("https://picsum.photos/id/106/800/400", rgba(255,255,255,.45));
+  /* legg vanlige deklarasjoner først */
   margin: 2rem 1rem;
   padding: 2rem;
   display: grid;
   place-items: center;
   text-align: center;
+
+  /* så inkluderer du mixinene */
+  @include kortbase(#c2c2c2);
+  @include bg-overlay("https://picsum.photos/id/106/800/400", rgba(255,255,255,.45));
 
   h1 { margin: 0 0 1rem 0; }
   .btn { @include knapp-stil; }

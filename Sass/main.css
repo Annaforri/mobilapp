@@ -23,23 +23,66 @@
 
 nav {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
+  left: 10px;
+  right: 10px;
   z-index: 50;
   background-color: #03260b;
-  width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  width: min(100%, 525px);
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  padding: 0.5rem 1rem;
+}
+nav ul li i {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+}
+nav ul li i:hover {
+  color: #9ee8af;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%; /* gjør sirkelen */
+  border: 3px solid white;
+  overflow: hidden; /* klipp bildet inni sirkelen */
+}
+footer a img {
+  width: 100%;
+  height: 100%; /* fyller hele containeren */
+  object-fit: cover; /* fyller sirkelen */
+  display: block; /* fjerner mellomrom under bildet */
+}
+footer ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -47,17 +90,12 @@ nav ul {
   gap: 1rem;
   margin: 0;
   padding: 0;
-  width: min(100%, 400px);
 }
-nav ul li {
-  padding: 0.5rem 1rem;
+footer li {
+  margin-top: 2rem;
 }
-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-nav ul li a:hover {
-  color: #9ee8af;
+footer li i {
+  font-size: 1.5rem;
 }
 
 /* ===== Reset / grunnlag ===================================== */
@@ -80,7 +118,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
   color: #000000;
-  padding-bottom: 100px; /* slik at fixed-nav ikke dekker innhold */
+  padding-bottom: 150px; /* slik at fixed-nav ikke dekker innhold */
 }
 
 /* Viktig for at grid/flex-barn skal få lov å krympe */
@@ -92,6 +130,13 @@ section, article, .grid-item {
 /* Horisontal swipe-container uten synlig scrollbar */
 /* ===== Velkomstbanner ======================================= */
 #welcome-banner {
+  /* legg vanlige deklarasjoner først */
+  margin: 2rem 1rem;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  /* så inkluderer du mixinene */
   background-color: #c2c2c2;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,11 +146,6 @@ section, article, .grid-item {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  margin: 2rem 1rem;
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-  text-align: center;
 }
 #welcome-banner:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
