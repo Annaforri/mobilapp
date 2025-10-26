@@ -61,16 +61,21 @@ nav{
         padding: 0;
 
         li {
-            padding: 0.5rem 1rem;
+          
 
             i {
                 text-decoration: none;
                 color: design.$hvit;
                 font-size: 1.8rem;
+                padding: 0.5rem 1rem;
 
                 &:hover {
                     color: design.$grønn;
                 }
+
+                &:focus{ outline: none;}
+                &:focus-visible{ outline: 3px solid design.$hvit;outline-offset: 10px;}
+                
 
             }
         }
