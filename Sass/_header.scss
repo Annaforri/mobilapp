@@ -72,9 +72,6 @@ nav{
                 &:hover {
                     color: design.$grønn;
                 }
-
-                &:focus{ outline: none;}
-                &:focus-visible{ outline: 3px solid design.$hvit;outline-offset: 10px;}
                 
 
             }
