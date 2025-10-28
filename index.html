@@ -9,19 +9,23 @@
     <link rel="stylesheet" href="css/main.css">
     <title>SASS</title>
 </head>
-<body>
-    <div class="grid-container">    
+<body> 
+    <div class="deskopnav">
     <header class="main-header">
-        <a href="index.html" class="logo"><img src="https://picsum.photos/id/40/100/100" alt="logo"></a>
-    </header>
+        <a href="index.html" class="logo"><img src="https://picsum.photos/id/40/100/100" alt="logo av katt"></a>
+ 
     <nav>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#" aria-label="Hjem" titel="hjem"><i class="fa-solid fa-house" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="handlekurv" titel="Din handlekurv"><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="dine favoritter" titel="Dine favoritter"><i class="fa-solid fa-heart" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Din profil" titel="Din profil"><i class="fa-solid fa-user" aria-hidden="true"></i></a></li>
         </ul>
-    </nav>
+    </nav>   
+</header>
+</div> 
+
+<div class=" mobil deskop">
     <main>
         <section id="welcome-banner">
             <header>
@@ -114,6 +118,8 @@
         </div>
         </section>
     </main>
+
+    </div>
     <footer>
         <a href="index.html" class="logo"><img src="https://picsum.photos/id/40/100/100?grayscale" alt="logo"></a>
         <ul class="some">
@@ -122,6 +128,5 @@
             <li><i class="fa-brands fa-pinterest-p"></i></li>
         </ul>
     </footer>
-    </div>
 </body>
 </html>

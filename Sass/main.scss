@@ -9,8 +9,7 @@ html, body { margin: 0; padding: 0; }
 
 body {
   /* Behold «mobil-bredde»-utseende på desktop, men ikke lås minimum */
-  width: 100%;
-  max-width: 600px;        /* ta bort hvis du vil at innhold kan bli bredere */
+  width: 100%;      /* ta bort hvis du vil at innhold kan bli bredere */
   margin: 0 auto;
   font-family: Arial, sans-serif;
   background-color: design.$hvit;
@@ -20,6 +19,11 @@ body {
 
 /* Viktig for at grid/flex-barn skal få lov å krympe */
 section, article, .grid-item { min-width: 0; }
+
+.mobil{
+  width: 90%;
+  margin: 0 auto;
+}
 
 /* ===== Mixins =============================================== */
 @mixin kortbase(
@@ -270,6 +274,16 @@ section, article, .grid-item { min-width: 0; }
   .popular-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 700px) {
+
+  .deskop {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
 }
 
 

@@ -50,18 +50,71 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-nav ul li {
-  padding: 0.5rem 1rem;
-}
 nav ul li i {
   text-decoration: none;
   color: white;
   font-size: 1.8rem;
+  padding: 0.5rem 1rem;
 }
 nav ul li i:hover {
   color: #9ee8af;
 }
+nav ul li i:focus {
+  outline: none;
+}
+nav ul li i:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 10px;
+}
 
+@media (min-width: 790px) {
+  body {
+    padding-top: 0;
+  }
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: #03260b;
+    padding: 1rem 3rem;
+    margin: 0;
+    flex: 1 1 auto;
+    border-color: #03260b;
+  }
+  .main-header .logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+  }
+  .main-header .logo img {
+    display: block;
+  }
+  nav {
+    position: static;
+    inset: auto;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  nav ul li i {
+    font-size: 1.5rem;
+    color: white;
+  }
+  nav ul li i:hover {
+    color: #9ee8af;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -114,8 +167,7 @@ html, body {
 
 body {
   /* Behold «mobil-bredde»-utseende på desktop, men ikke lås minimum */
-  width: 100%;
-  max-width: 600px; /* ta bort hvis du vil at innhold kan bli bredere */
+  width: 100%; /* ta bort hvis du vil at innhold kan bli bredere */
   margin: 0 auto;
   font-family: Arial, sans-serif;
   background-color: white;
@@ -126,6 +178,11 @@ body {
 /* Viktig for at grid/flex-barn skal få lov å krympe */
 section, article, .grid-item {
   min-width: 0;
+}
+
+.mobil {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* ===== Mixins =============================================== */
@@ -367,5 +424,12 @@ section, article, .grid-item {
   .kategori-container,
   .popular-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 700px) {
+  .deskop {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }/*# sourceMappingURL=main.css.map */
