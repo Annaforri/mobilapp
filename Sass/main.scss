@@ -230,7 +230,7 @@ section, article, .grid-item { min-width: 0; }
     display: grid;
     gap: .25rem;
 
-    li:nth-child(1) { font-size: .9rem; color: #6b7280; } /* Brand */
+    li:nth-child(1) { font-size: 0.5rem; color: #6b7280; } /* Brand */
     li:nth-child(2) h3 { margin: 0; font-size: 1rem; }    /* Produktnavn */
     li:nth-child(3) { font-weight: 700; }                 /* Pris */
   }
